@@ -1,10 +1,13 @@
 import React from 'react';
 import './App.css';
+import InputField from './components/InputField.tsx';
 
-function App() {
+
+const App = () => {
   return (
     <div className="App">
-      Hello World    
+      <span className="heading">Notes</span> 
+      <InputField/>
     </div>
   );
 }
