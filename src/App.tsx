@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
 import './App.css';
-import InputField from './components/InputField.tsx';
+import React, { useState } from 'react';
 import { Todo } from './components/model.ts';
+import TodoList from './components/TodoList.tsx';
+import InputField from './components/InputField.tsx';
 
 const App = () => {
 
@@ -23,9 +24,7 @@ const App = () => {
     <div className="App">
       <span className="heading">Notes</span> 
       <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
-      {todos.map((t) => (
-        <li>{t.todo}</li>
-      ))}
+      <TodoList todos={todos} setTodos={setTodos}/>
     </div>
   );
 }
